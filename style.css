@@ -1,0 +1,251 @@
+
+*{
+   
+   margin: 0;
+   padding: 0;
+   /* flex-wrap: wrap; */
+   
+   
+}
+body{
+    
+    scroll-behavior: smooth;
+  
+    cursor: pointer;
+}
+    .container5 img:hover{
+      
+        transform: scale(1.03);
+    
+    }
+    .container5 img{
+      transition: 0.3s;
+    }
+
+.container{
+    
+
+   margin-top: 1rem;
+    /* display: flex; */
+    
+   
+   
+    
+    
+  align-items: center; 
+    
+}
+.container1 button{
+  transition: .2s ease-in-out;
+  margin-left: 20px;
+}
+.container1 button:hover{
+  transform: scale(1.03);
+  text-decoration: underline;
+  color: white;
+  background-color: darkcyan;
+}
+.container .logo {
+  color: teal;
+  font-size:2rem;
+  text-decoration: underline;
+  font-weight: bold;
+  
+}
+.container .logo span{
+    background-color:lightseagreen;
+    color: white;
+
+}
+.container .search{
+    position: relative;
+  
+    
+    
+}
+
+.container .search1{
+    width: 64vw;
+    height: 6vh;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+   
+    border-radius: 5px;
+}
+
+.container .btn1{
+    width: 6vw;
+    text-align: center;
+    height: 4vh;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    
+    background-color: darkcyan;
+    border-radius: 3px;
+}
+.container  .fa{
+    position: absolute;
+    right: 20px;
+    top: 9px;
+    font-size: 1rem;
+    
+    
+}
+.container .fa{
+    
+    font-weight: bolder;
+    
+
+    color: darkcyan;
+    
+}
+.elements img{
+  transition: .2s ease-in-out;
+  
+}
+
+.elements img:hover{
+
+  transform: scale(1.05);
+  
+}
+
+
+    
+    footer{
+        background-color: rgb(89, 88, 88);
+        color: rgb(218, 214, 214);
+        width: 92.5vw;
+        height:fit-content;
+        margin-left: 39px;
+        border-radius: 5px 5px ;
+        
+    }
+  footer .container6{
+    display: flex;
+     justify-content: space-evenly;
+     font-size: 1rem;
+     
+    
+  }
+  
+  footer h2{
+    
+    margin-top: 7px;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    
+  }
+  
+  footer .container6 .a1{
+    font-size: 1.4em;
+    
+    color: white;
+
+  }
+  footer .container6 .d6{
+    background-color: rgb(231, 227, 227);
+    color: black;
+  height:55vh;
+    width: 23vw;
+    border-radius: 4px;
+  }
+  footer .container6 .d6 p{
+    font-size: 1em;
+    margin-top: 7px;
+    margin-left: 7px;
+    transition: .4s;
+  }
+  footer .container6 .d6 input{
+    width: 19vw;
+   
+    border-right: none;
+    font-size: 1em;
+    
+    border-radius: 3px 0 0 3px;
+    border: 1px solid rgb(232, 224, 224);
+  }
+  footer .container6 .d7{
+   display: flex;
+   margin-left: 3px;
+   font-size: medium;
+   
+  }
+  footer .container6 .d7 button{
+    background-color: darkcyan;
+    color: white;
+    width: 1.5vw;
+    margin-left: -3px;
+    border: 1px solid darkcyan;
+    border-radius: 0 3px 3px 0;
+
+  }
+  footer .container6 .d6 p span{
+    color: red;
+    font-size: 1em;
+  }
+  footer .container6 .d6  .d8{
+      font-size:1em;
+      color: rgb(138, 133, 133);
+  }
+  footer .container6 .d6 .d9{
+    display: flex;
+    margin-left: 12px;
+  }
+  footer .container6 .d6 .d9 img{
+    width: 4vw;
+    
+  }
+  footer .container6 .d6 .d11{
+    display: flex;
+  }
+  footer .container6 .d6 .d11 img{
+    width: 46%;
+  }
+  footer .container6 .d6 .a{
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 1em;
+  }
+  footer .container6 .d6 .d10{
+    
+    display: flex;
+    justify-content: space-evenly;
+
+  }
+  footer .container6 .d6 .d10 .fa{
+    text-decoration: none;
+    color:darkcyan;
+    font-weight: bold;
+  }
+    
+    
+  
+  footer .container6 .d6 .d11{
+    margin-left: 4px;
+    margin-top: 6px;
+  }
+  footer .s1 img{
+    width:6vw;
+    margin-left: 20px;
+    
+  }
+  footer .s1{
+    display: flex;
+    padding-bottom: 10px;
+   
+    
+  }
+  footer .s1 .s2{
+    margin-left: 80px;
+  }
+  .container6 p:hover{
+     color:white;
+     text-decoration-line: underline;
+     font-weight: bold;
+  }
+  
