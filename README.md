@@ -15,6 +15,8 @@ built using **HTML, CSS , Javascript, jQuery, and Bootstrap**.
 - Smooth animations 
 - Bootstrap UI Components
 - Clean and simple layout
+- Add to cart functionality
+- Dropdown lists 
 
 ## Author 
 Akash Gunjal
