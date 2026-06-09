@@ -83,7 +83,7 @@ function displayproduct()
                <div class="card">
                <div class="card-body">
                  
-                 <img src="/images/healthkart/${product.id}.webp" height="140" width="140" class="img-fluid " " >
+                 <img src="images/healthkart/${product.id}.webp" height="140" width="140" class="img-fluid " " >
                  <div class="d-flex justify-content-center d-none">
                    <div class="p-2">
                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
