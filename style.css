@@ -322,8 +322,8 @@ body{
 
   .container1 {
     overflow-x: auto;
-    flex-wrap: nowrap !important;
-    margin-left: 0 !important;
+    flex-wrap: nowrap;
+    margin-left: 0 ;
     padding: 10px;
   }
 
@@ -342,8 +342,8 @@ body{
   }
 
   .container5 {
-    margin-left: 15px !important;
-    margin-right: 15px !important;
+    margin-left: 15px ;
+    margin-right: 15px ;
   }
 
   .container5 .row {
@@ -399,236 +399,427 @@ body{
     margin-left: 0;
   }
 }
+/* ==================================================
+   FINAL MOBILE RESPONSIVE CSS
+   Purane mobile media queries remove karke
+   isko style.css ke sabse end mein paste karo
+================================================== */
 
+@media screen and (max-width: 600px) {
 
-/* Mobile screens */
-@media screen and (max-width: 768px) {
+  /* ---------- BASIC MOBILE FIX ---------- */
 
+  html,
   body {
-    cursor: default;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
   }
 
-  .container {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  img,
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  /* ---------- TOP HEADER ---------- */
+
+  body > .container:first-child {
     width: 100%;
-    margin-top: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
   }
 
-  .container .logo {
-    font-size: 1.5rem;
+  body > .container:first-child .logo {
+    width: auto;
+    margin: 0;
+    font-size: 22px;
+    text-align: left;
+    white-space: nowrap;
   }
 
-  .container .search1 {
-    font-size: 0.9rem;
-  }
-
-  .container1 {
+  body > .container:first-child .search {
+    order: 3;
     width: 100%;
+    flex: 0 0 100%;
+    position: relative;
+  }
+
+  body > .container:first-child .search1 {
+    width: 100%;
+    max-width: 100%;
+    height: 42px;
+    margin: 0;
+    padding: 8px 42px 8px 12px;
+    font-size: 13px;
+    text-align: left;
+  }
+
+  body > .container:first-child .fa-search {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+  }
+
+  body > .container:first-child > button {
+    margin: 0 !important;
+    flex-shrink: 0;
+  }
+
+
+  /* ---------- MOBILE NAVBAR ---------- */
+
+  body > .container1 {
+    width: 100%;
+    max-width: 100%;
     margin: 0 !important;
     padding: 8px 10px;
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+    overflow: visible;
   }
 
-  .container1 button {
-    font-size: 0.85rem;
-    padding: 8px 10px;
+  /* Shop by category */
+  body > .container1 > .container1 {
+    width: 100%;
+    grid-column: 1 / -1;
+    margin: 0 !important;
+    padding: 0;
   }
 
-  .container2 p {
-    font-size: 0.9rem;
+  body > .container1 > .container1 .d-flex,
+  body > .container1 > .container1 .bd-highlight,
+  body > .container1 > .container1 .dropdown {
+    width: 100%;
+  }
+
+  body > .container1 > .container1 button {
+    width: 100%;
+    margin: 0 !important;
+    padding: 9px 10px;
+    font-size: 12px;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  /* Home, Shop, Stores, Pages, Account */
+  body > .container1 > .bd-highlight {
+    width: 100%;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 0;
+  }
+
+  body > .container1 > .bd-highlight .dropdown {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  body > .container1 > .bd-highlight button,
+  body > .container1 > .bd-highlight .nav-link {
+    width: 100%;
+    margin: 0 !important;
+    padding: 7px 2px !important;
+    font-size: 11px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  body > .container1 .dropdown-menu {
+    max-width: calc(100vw - 20px);
+    font-size: 13px;
+  }
+
+  body > .container1 .submenu {
+    position: static;
+    width: 100%;
+    margin: 0;
+  }
+
+
+  /* ---------- MAIN BANNER ---------- */
+
+  .container2 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 8px 0;
+  }
+
+  .container2 > p {
+    margin: 0 0 8px;
+    padding: 0 10px;
+    font-size: 13px;
+  }
+
+  .container2 .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 8px;
+  }
+
+  .container2 .carousel,
+  .container2 .carousel-inner,
+  .container2 .carousel-item {
+    width: 100%;
+    max-width: 100%;
   }
 
   .container2 .carousel-item img {
-    min-height: 200px;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
+    display: block;
   }
 
+
+  /* ---------- CATEGORY CARDS ---------- */
+
   .container5 {
-    margin-left: 10px !important;
-    margin-right: 10px !important;
+    width: 100%;
+    max-width: 100%;
+    margin: 8px 0 !important;
+    padding: 0 8px;
+  }
+
+  .container5 .carousel,
+  .container5 .carousel-inner,
+  .container5 .carousel-item {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .container5 .row {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .container5 .col-sm-3 {
     width: 50%;
+    max-width: 50%;
+    flex: 0 0 50%;
+    padding: 5px;
+  }
+
+  .container5 .card {
+    width: 100%;
+    height: 100%;
+    margin: 0;
   }
 
   .container5 .card-body {
-    padding: 8px;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .container5 img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+  /* ---------- POPULAR PRODUCTS ---------- */
+
+  body > .container {
+    max-width: 100%;
+  }
+
+  body > .container h3 {
+    font-size: 22px;
   }
 
   .elements {
-    row-gap: 15px;
+    width: 100%;
+    margin: 0;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px;
   }
 
-  footer {
+  .elements > div {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .elements .card {
+    width: 100%;
+    height: 100%;
+  }
+
+  .elements img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  /* ---------- MODAL ---------- */
+
+  .modal-dialog {
     width: calc(100% - 20px);
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 5px;
+    margin: 10px auto;
+  }
+
+  .modal-body {
+    padding: 16px;
+  }
+
+
+  /* ---------- CART OFFCANVAS ---------- */
+
+  .offcanvas {
+    width: 90% ;
+    max-width: 360px;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  footer {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 25px 15px 15px;
+    border-radius: 0;
   }
 
   footer h2 {
-    font-size: 2rem;
+    margin-bottom: 20px;
+    font-size: 28px;
   }
 
   footer .container6 {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 15px;
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 0;
   }
 
   footer .container6 > div {
     width: 100%;
+    max-width: 100%;
   }
 
   footer .container6 .d6 {
-    grid-column: 1 / -1;
     width: 100%;
     height: auto;
-    padding: 10px;
+    min-height: 0;
+    padding: 12px;
   }
 
-  footer .container6 .a1 {
-    font-size: 1.2rem;
-  }
-
-  footer .container6 p {
-    font-size: 0.9rem;
+  footer .container6 .d7 {
+    width: 100%;
+    margin: 0;
+    display: flex;
   }
 
   footer .container6 .d6 input {
     width: calc(100% - 45px);
+    min-width: 0;
+    height: 42px;
   }
 
   footer .container6 .d7 button {
     width: 45px;
+    min-width: 45px;
+    margin: 0;
   }
 
   footer .container6 .d6 .d9 {
+    margin-left: 0;
+    display: flex;
     flex-wrap: wrap;
+    gap: 8px;
   }
 
   footer .container6 .d6 .d9 img {
-    width: 55px;
-  }
-
-  footer .container6 .d6 .d11 {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  footer .container6 .d6 .d11 img {
-    width: 125px;
-  }
-
-  footer .s1 {
-    padding: 15px;
-  }
-
-  footer .s1 img {
-    width: 65px;
-  }
-}
-
-
-/* Small mobile screens */
-@media screen and (max-width: 576px) {
-
-  .container {
-    gap: 5px;
-  }
-
-  .container .logo {
-    width: 100%;
-    text-align: center;
-    font-size: 1.4rem;
-  }
-
-  .container > button {
-    margin-left: 0 !important;
-  }
-
-  .container .search {
-    width: 100%;
-  }
-
-  .container .search1 {
-    height: 42px;
-  }
-
-  .container1 button {
-    margin-left: 2px;
-    font-size: 0.8rem;
-  }
-
-  .container2 .carousel-item img {
-    min-height: 160px;
-  }
-
-  .container5 .col-sm-3 {
-    width: 100%;
-  }
-
-  .elements {
-    grid-template-columns: 1fr !important;
-  }
-
-  footer h2 {
-    font-size: 1.7rem;
-  }
-
-  footer .container6 {
-    grid-template-columns: 1fr;
-  }
-
-  footer .container6 .d6 {
-    grid-column: auto;
-  }
-
-  footer .container6 .d6 input {
-    font-size: 0.85rem;
+    width: 50px;
   }
 
   footer .container6 .d6 .d10 {
     justify-content: flex-start;
     gap: 20px;
-    padding-left: 5px;
   }
 
-  footer .s1 img {
+  footer .container6 .d6 .d11 {
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  footer .container6 .d6 .d11 img {
+    width: 120px;
+  }
+
+  footer .s1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 18px 0 5px;
+  }
+
+  footer .s1 img,
+  footer .s1 .s2 {
     width: 55px;
+    margin-left: 0;
+  }
+  body > .container1 {
+    overflow: visible;
+  }
+
+  body > .container1 > .container1 {
+    overflow: visible ;
+    position: relative;
+    z-index: 1000;
+  }
+
+  body > .container1 > .container1 .dropdown {
+    position: relative;
+    overflow: visible ;
+  }
+
+  body > .container1 > .container1 .dropdown-menu {
+    position: absolute ;
+    top: 100% ;
+    left: 0;
+    right: auto;
+    width: 100% ;
+    min-width: 100%;
+    max-height: none ;
+    overflow: visible ;
+    z-index: 9999 ;
+  }
+
+  body > .container1 > .container1 .dropdown-item {
+    white-space: normal;
+    padding: 10px 15px;
   }
 }
 
 
-/* Very small devices */
-@media screen and (max-width: 360px) {
 
-  .container .logo {
-    font-size: 1.2rem;
-  }
-
-  .container .search1 {
-    font-size: 0.8rem;
-  }
-
-  .container2 .carousel-item img {
-    min-height: 140px;
-  }
-
-  footer {
-    width: calc(100% - 10px);
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-
-  footer .container6 {
-    padding: 10px;
-  }
-
-  footer .s1 img {
-    width: 48px;
-  }
-}
