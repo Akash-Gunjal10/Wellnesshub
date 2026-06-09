@@ -123,10 +123,50 @@ displayproduct();
 
 
 
-let signup=document.querySelector("#b1");
+let signup = document.querySelector("#b1");
 
-signup.addEventListener("click",()=>{
-    alert("Sign Up Successfully");
+let nameInput = document.querySelector("#exampleFormControlText1");
+let emailInput = document.querySelector("#exampleFormControlInput1");
+let passwordInput = document.querySelector("#inputPassword");
+
+signup.addEventListener("click", () => {
+    let name = nameInput.value.trim();
+    let email = emailInput.value.trim();
+    let password = passwordInput.value.trim();
+
+    let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (name === "") {
+        alert("Please enter your name");
+        nameInput.focus();
+    }
+    else if (name.length < 3) {
+        alert("Name must contain at least 3 characters");
+        nameInput.focus();
+    }
+    else if (email === "") {
+        alert("Please enter your email address");
+        emailInput.focus();
+    }
+    else if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address");
+        emailInput.focus();
+    }
+    else if (password === "") {
+        alert("Please enter your password");
+        passwordInput.focus();
+    }
+    else if (password.length < 8) {
+        alert("Password must contain at least 8 characters");
+        passwordInput.focus();
+    }
+    else {
+        alert("Sign Up Successfully");
+
+        nameInput.value = "";
+        emailInput.value = "";
+        passwordInput.value = "";
+    }
 });
  
 
